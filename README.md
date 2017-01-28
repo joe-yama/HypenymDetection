@@ -25,12 +25,12 @@ make
 
 ## 使用法
 
-* デモンストレーション  
+### デモンストレーション  
 ./GetHypernym -d MODEL_FILE DIMENSION  
 MODEL_FILE : 単語ベクトルと学習した射影行列のファイル (model300.bin)  
 DIMENSION : 単語ベクトルの次元 (300)   
 
-* 射影行列の学習
+### 射影行列の学習
 
 1. 教師データの読み込み(isa.binを出力)  
    ./GetHypernym -s vec300.txt training_data.txt isa.bin  DIMENSION
@@ -39,7 +39,6 @@ DIMENSION : 単語ベクトルの次元 (300)
    ./GetHypernym -g isa.bin NEGS THRESHOLD MODEL_FILE DIMENSION MAX_ITERATIONS  
    NEGS : 負例の数 (推奨値：1)  
    THRESHOLD : クラスタリングの際のしきい値 (推奨値：0.075)
-
 
 ### training_dataの体裁
 
