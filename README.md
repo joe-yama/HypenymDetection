@@ -10,25 +10,27 @@ Yahoo!知恵袋を教師データとし，学習した単語ベクトル (次元
 単語ベクトルと，学習した射影行列(バイナリファイル)
 
 
-##コンパイル
+## コンパイル
 make
 
 
-##環境
-*g++4.8以上
+## 環境
 
-*2GB以上のRAM
+* g++4.8以上
 
-*ライブラリ：Eigen <http://eigen.tuxfamily.org/>
+* 2GB以上のRAM
+
+* ライブラリ：Eigen <http://eigen.tuxfamily.org/>
 
 
-##使用法
-*デモンストレーション
+## 使用法
+
+* デモンストレーション
 ./GetHypernym -d MODEL_FILE DIMENSION
 MODEL_FILE : 単語ベクトルと学習した射影行列のファイル (model300.bin)
 DIMENSION : 単語ベクトルの次元 (300)   
 
-*射影行列の学習
+* 射影行列の学習
 1. 教師データの読み込み(isa.binを出力)
    ./GetHypernym -s vec300.txt training_data.txt isa.bin  DIMENSION
 
@@ -38,6 +40,7 @@ DIMENSION : 単語ベクトルの次元 (300)
    THRESHOLD : クラスタリングの際のしきい値 (推奨値：0.075)
 
 
-###training_dataの体裁
+### training_dataの体裁
+
 上位語\t下位語
 の体裁で各行にひとつずつ上位下位語ペアを記述
