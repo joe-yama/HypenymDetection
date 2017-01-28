@@ -25,22 +25,23 @@ make
 
 ## 使用法
 
-* デモンストレーション
-./GetHypernym -d MODEL_FILE DIMENSION
-MODEL_FILE : 単語ベクトルと学習した射影行列のファイル (model300.bin)
+* デモンストレーション  
+./GetHypernym -d MODEL_FILE DIMENSION  
+MODEL_FILE : 単語ベクトルと学習した射影行列のファイル (model300.bin)  
 DIMENSION : 単語ベクトルの次元 (300)   
 
 * 射影行列の学習
-1. 教師データの読み込み(isa.binを出力)
+
+1. 教師データの読み込み(isa.binを出力)  
    ./GetHypernym -s vec300.txt training_data.txt isa.bin  DIMENSION
 
-2. 射影行列の学習(MODEL_FILEを出力)
-   ./GetHypernym -g isa.bin NEGS THRESHOLD MODEL_FILE DIMENSION MAX_ITERATIONS
-   NEGS : 負例の数 (推奨値：1)
+2. 射影行列の学習(MODEL_FILEを出力)  
+   ./GetHypernym -g isa.bin NEGS THRESHOLD MODEL_FILE DIMENSION MAX_ITERATIONS  
+   NEGS : 負例の数 (推奨値：1)  
    THRESHOLD : クラスタリングの際のしきい値 (推奨値：0.075)
 
 
 ### training_dataの体裁
 
-上位語\t下位語
+'上位語\t下位語'  
 の体裁で各行にひとつずつ上位下位語ペアを記述
